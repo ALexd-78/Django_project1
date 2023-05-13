@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # User-specific stuff:
-.idea/database.ini
+.venv/database.ini

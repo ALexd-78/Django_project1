@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form method="post" >
-    {% csrf_token %}
-    <input placeholder="name" name="name"/><br><br>
-    <input placeholder="email" name="email" type=”email”/><br><br>
-    <textarea placeholder="your message" name="message"></textarea><br><br>
-    <input type="submit" value="Submit" />
-</form>
+{% extends 'main/base.html' %}
 
-</body>
-</html>
+{% block content %}
+    {% for object in object_list %}
+        {% include 'main/includes/inc_student_card.html' %}
+    {% endfor %}
+{% endblock %}

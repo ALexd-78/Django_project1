@@ -6,8 +6,8 @@
             <div class="card-body">
                 <form method="post">
                     {% csrf_token %}
-                    {{ form.as_p }}
-                    <input type="submit" class="btn btn-success" value="{% if object %}Сохранить{% else %}Создать{% endif %}">
+                    Уверены, что хотите удалить студента "{{ object }}"?<br>
+                    <input type="submit" class="btn btn-outline-danger" value="Уверен">
                 </form>
             </div>
             <div class="card-footer">

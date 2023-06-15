@@ -4,19 +4,26 @@
     <div class="col">
         <div class="card">
             <div class="card-body">
-               <table class="table">
-                   <tr>
-                       <td>Имя</td>
-                       <td>{{ object.first_name }}</td>
-                   </tr>
-                   <tr>
-                       <td>Фамилия</td>
-                       <td>{{ object.last_name }}</td>
-                   </tr>
-               </table>
+                <table class="table">
+                    <tr>
+                        <td>Имя</td>
+                        <td>{{ object.first_name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Фамилия</td>
+                        <td>{{ object.last_name }}</td>
+                    </tr>
+                </table>
             </div>
             <div class="card-footer">
                 <a href="{% url 'main:students_list' %}" class="btn btn-primary"><< Назад</a>
+                <a href="{% url 'main:toggle_activity' object.pk %}" class="btn btn-outline-warning float-right">
+                    {% if object.is_active %}
+                    Деактивировать
+                    {% else %}
+                    Активировать
+                    {% endif %}
+                </a>
             </div>
         </div>
     </div>

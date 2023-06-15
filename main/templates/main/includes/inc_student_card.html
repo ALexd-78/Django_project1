@@ -9,6 +9,8 @@
             </svg>
             <h2>{{ object.first_name|title }} {{ object.last_name|title }}</h2>
             <p><a class="btn btn-secondary" href="{% url 'main:student_item' object.pk %}" role="button">Посмотреть &raquo;</a></p>
+            <p><a class="btn btn-warning" href="{% url 'main:students_update' object.pk %}" role="button">Изменить &raquo;</a></p>
+            <p><a class="btn btn-danger" href="{% url 'main:students_delete' object.pk %}" role="button">Удалить &raquo;</a></p>
         </div>
     </div>
 </div><!-- /.col-lg-4 -->
